@@ -21,21 +21,6 @@ function change(){
 	//alert(this);
 }
 
-function addLoadEvent(func){
-	var old = window.onload;
-	window.onload = function(){
-		if(typeof window.onload != 'function'){
-			window.onload = func;
-		}else{
-			window.onload = function(){
-				if(old){
-					old();
-				}
-				func();
-			}
-		}
-	}
-}
 /*玩家选择图片事件*/
 function picClickEvent(){
 	this.className = 'high-opacity';
